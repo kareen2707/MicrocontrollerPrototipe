@@ -1,0 +1,1029 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: PICtop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PICtop.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PICtop"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : PICtop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\ipcore_dir\FIFO.vhd" into library work
+Parsing entity <FIFO>.
+Parsing architecture <FIFO_a> of entity <fifo>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\ShiftRegister.vhd" into library work
+Parsing entity <ShiftRegister>.
+Parsing architecture <Behavioral> of entity <shiftregister>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\RS232_TX.vhd" into library work
+Parsing entity <RS232_TX>.
+Parsing architecture <Behavioral> of entity <rs232_tx>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\RS232_RX.vhd" into library work
+Parsing entity <RS232_RX>.
+Parsing architecture <Behavioral> of entity <rs232_rx>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\PIC_pkg.vhd" into library work
+Parsing package <PIC_pkg>.
+Parsing package body <PIC_pkg>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\RS232top.vhd" into library work
+Parsing entity <RS232top>.
+Parsing architecture <RTL> of entity <rs232top>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\ROM.vhd" into library work
+Parsing entity <ROM>.
+Parsing architecture <AUTOMATIC> of entity <rom>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\RAM.vhd" into library work
+Parsing entity <ram>.
+Parsing architecture <behavior> of entity <ram>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\DMA.vhd" into library work
+Parsing entity <DMA>.
+Parsing architecture <Behavioral> of entity <dma>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\CPU.vhd" into library work
+Parsing entity <CPU>.
+Parsing architecture <Behavioral> of entity <cpu>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "C:\Xilinx\Proyectos\PIC_improved\PICtop.vhd" into library work
+Parsing entity <PICtop>.
+Parsing architecture <behavior> of entity <pictop>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <PICtop> (architecture <behavior>) from library <work>.
+
+Elaborating entity <RS232top> (architecture <RTL>) from library <work>.
+
+Elaborating entity <RS232_TX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RS232_RX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ShiftRegister> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <FIFO> (architecture <FIFO_a>) from library <work>.
+
+Elaborating entity <DMA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ram> (architecture <behavior>) from library <work>.
+
+Elaborating entity <CPU> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Xilinx\Proyectos\PIC_improved\CPU.vhd" Line 122. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Xilinx\Proyectos\PIC_improved\CPU.vhd" Line 295. Case statement is complete. others clause is never selected
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ROM> (architecture <AUTOMATIC>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <PICtop>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\PICtop.vhd".
+    Summary:
+	no macro.
+Unit <PICtop> synthesized.
+
+Synthesizing Unit <RS232top>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\RS232top.vhd".
+    Found 1-bit register for signal <Ack_in>.
+    Found 1-bit register for signal <LineRD_in>.
+    Found 8-bit register for signal <Data_FF>.
+    Found 1-bit register for signal <StartTX>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <RS232top> synthesized.
+
+Synthesizing Unit <RS232_TX>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\RS232_TX.vhd".
+    Found 2-bit register for signal <CurrentState>.
+    Found 8-bit register for signal <bit_counter>.
+    Found 4-bit register for signal <data_count>.
+    Found finite state machine <FSM_0> for signal <CurrentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <bit_counter[7]_GND_9_o_add_0_OUT> created at line 56.
+    Found 4-bit adder for signal <data_count[3]_GND_9_o_add_3_OUT> created at line 63.
+    Found 1-bit 8-to-1 multiplexer for signal <data_count[2]_Data[7]_Mux_16_o> created at line 103.
+    Found 8-bit comparator greater for signal <n0003> created at line 60
+    Found 4-bit comparator greater for signal <data_count[3]_PWR_9_o_LessThan_16_o> created at line 102
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RS232_TX> synthesized.
+
+Synthesizing Unit <RS232_RX>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\RS232_RX.vhd".
+    Found 2-bit register for signal <CurrentState>.
+    Found 7-bit register for signal <cnt_halfbit>.
+    Found 8-bit register for signal <bit_counter>.
+    Found 4-bit register for signal <data_count>.
+    Found finite state machine <FSM_1> for signal <CurrentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 4                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit adder for signal <cnt_halfbit[6]_GND_10_o_add_0_OUT> created at line 42.
+    Found 8-bit adder for signal <bit_counter[7]_GND_10_o_add_4_OUT> created at line 50.
+    Found 4-bit adder for signal <data_count[3]_GND_10_o_add_7_OUT> created at line 57.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RS232_RX> synthesized.
+
+Synthesizing Unit <ShiftRegister>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\ShiftRegister.vhd".
+    Found 8-bit register for signal <aux>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <ShiftRegister> synthesized.
+
+Synthesizing Unit <DMA>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\DMA.vhd".
+WARNING:Xst:647 - Input <rx_full> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <cont>.
+    Found 4-bit register for signal <CurrentState>.
+    Found finite state machine <FSM_2> for signal <CurrentState>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 14                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <cont[1]_GND_14_o_add_0_OUT> created at line 75.
+    Found 1-bit tristate buffer for signal <aux_write_en> created at line 81
+    Found 1-bit tristate buffer for signal <aux_oe> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<7>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<6>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<5>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<4>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<3>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<2>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<1>> created at line 81
+    Found 1-bit tristate buffer for signal <tx_data<0>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<7>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<6>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<5>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<4>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<3>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<2>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<1>> created at line 81
+    Found 1-bit tristate buffer for signal <databus<0>> created at line 81
+    Found 1-bit tristate buffer for signal <address<7>> created at line 81
+    Found 1-bit tristate buffer for signal <address<6>> created at line 81
+    Found 1-bit tristate buffer for signal <address<5>> created at line 81
+    Found 1-bit tristate buffer for signal <address<4>> created at line 81
+    Found 1-bit tristate buffer for signal <address<3>> created at line 81
+    Found 1-bit tristate buffer for signal <address<2>> created at line 81
+    Found 1-bit tristate buffer for signal <address<1>> created at line 81
+    Found 1-bit tristate buffer for signal <address<0>> created at line 81
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred  26 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <DMA> synthesized.
+
+Synthesizing Unit <ram>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\RAM.vhd".
+    Found 256x8-bit single-port RAM <Mram_contents_ram_ge> for signal <contents_ram_ge>.
+    Found 8-bit register for signal <contents_ram_es<41>>.
+    Found 8-bit register for signal <contents_ram_es<40>>.
+    Found 8-bit register for signal <contents_ram_es<39>>.
+    Found 8-bit register for signal <contents_ram_es<38>>.
+    Found 8-bit register for signal <contents_ram_es<37>>.
+    Found 8-bit register for signal <contents_ram_es<36>>.
+    Found 8-bit register for signal <contents_ram_es<35>>.
+    Found 8-bit register for signal <contents_ram_es<34>>.
+    Found 8-bit register for signal <contents_ram_es<33>>.
+    Found 8-bit register for signal <contents_ram_es<32>>.
+    Found 8-bit register for signal <contents_ram_es<23>>.
+    Found 8-bit register for signal <contents_ram_es<22>>.
+    Found 8-bit register for signal <contents_ram_es<21>>.
+    Found 8-bit register for signal <contents_ram_es<20>>.
+    Found 8-bit register for signal <contents_ram_es<19>>.
+    Found 8-bit register for signal <contents_ram_es<18>>.
+    Found 8-bit register for signal <contents_ram_es<17>>.
+    Found 8-bit register for signal <contents_ram_es<16>>.
+    Found 8-bit register for signal <contents_ram_es<5>>.
+    Found 8-bit register for signal <contents_ram_es<4>>.
+    Found 8-bit register for signal <contents_ram_es<3>>.
+    Found 8-bit register for signal <contents_ram_es<2>>.
+    Found 8-bit register for signal <contents_ram_es<1>>.
+    Found 8-bit register for signal <contents_ram_es<0>>.
+    Found 8-bit register for signal <contents_ram_es<49>>.
+    Found 8-bit register for signal <contents_ram_es<62>>.
+    Found 8-bit register for signal <contents_ram_es<61>>.
+    Found 8-bit register for signal <contents_ram_es<60>>.
+    Found 8-bit register for signal <contents_ram_es<59>>.
+    Found 8-bit register for signal <contents_ram_es<58>>.
+    Found 8-bit register for signal <contents_ram_es<57>>.
+    Found 8-bit register for signal <contents_ram_es<56>>.
+    Found 8-bit register for signal <contents_ram_es<55>>.
+    Found 8-bit register for signal <contents_ram_es<54>>.
+    Found 8-bit register for signal <contents_ram_es<53>>.
+    Found 8-bit register for signal <contents_ram_es<52>>.
+    Found 8-bit register for signal <contents_ram_es<51>>.
+    Found 8-bit register for signal <contents_ram_es<50>>.
+    Found 8-bit register for signal <contents_ram_es<48>>.
+    Found 8-bit register for signal <contents_ram_es<47>>.
+    Found 8-bit register for signal <contents_ram_es<46>>.
+    Found 8-bit register for signal <contents_ram_es<45>>.
+    Found 8-bit register for signal <contents_ram_es<44>>.
+    Found 8-bit register for signal <contents_ram_es<43>>.
+    Found 8-bit register for signal <contents_ram_es<42>>.
+    Found 8-bit register for signal <contents_ram_es<31>>.
+    Found 8-bit register for signal <contents_ram_es<30>>.
+    Found 8-bit register for signal <contents_ram_es<29>>.
+    Found 8-bit register for signal <contents_ram_es<28>>.
+    Found 8-bit register for signal <contents_ram_es<27>>.
+    Found 8-bit register for signal <contents_ram_es<26>>.
+    Found 8-bit register for signal <contents_ram_es<25>>.
+    Found 8-bit register for signal <contents_ram_es<24>>.
+    Found 8-bit register for signal <contents_ram_es<15>>.
+    Found 8-bit register for signal <contents_ram_es<14>>.
+    Found 8-bit register for signal <contents_ram_es<13>>.
+    Found 8-bit register for signal <contents_ram_es<12>>.
+    Found 8-bit register for signal <contents_ram_es<11>>.
+    Found 8-bit register for signal <contents_ram_es<10>>.
+    Found 8-bit register for signal <contents_ram_es<9>>.
+    Found 8-bit register for signal <contents_ram_es<8>>.
+    Found 8-bit register for signal <contents_ram_es<7>>.
+    Found 8-bit register for signal <contents_ram_es<6>>.
+    Found 8-bit register for signal <contents_ram_es<63>>.
+INFO:Xst:3019 - HDL ADVISOR - 512 flip-flops were inferred for signal <contents_ram_es>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 16x7-bit Read Only RAM for signal <Temp_H>
+    Found 16x7-bit Read Only RAM for signal <Temp_L>
+    Found 8-bit 64-to-1 multiplexer for signal <address[5]_contents_ram_es[63][7]_wide_mux_234_OUT> created at line 107.
+    Found 1-bit tristate buffer for signal <databus<7>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<6>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<5>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<4>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<3>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<2>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<1>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<0>> created at line 107
+    Found 1-bit tristate buffer for signal <databus<7>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<6>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<5>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<4>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<3>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<2>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<1>> created at line 123
+    Found 1-bit tristate buffer for signal <databus<0>> created at line 123
+    Found 8-bit comparator greater for signal <address[7]_GND_41_o_LessThan_1_o> created at line 52
+    Summary:
+	inferred   3 RAM(s).
+	inferred 512 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <ram> synthesized.
+
+Synthesizing Unit <CPU>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\CPU.vhd".
+WARNING:Xst:647 - Input <ROM_Data<11:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FlagC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FlagN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <FlagE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <PC_reg>.
+    Found 3-bit register for signal <current_state>.
+    Found 8-bit register for signal <INS_reg>.
+    Found 8-bit register for signal <TMP_reg>.
+    Found 8-bit register for signal <PC_save>.
+    Found 1-bit register for signal <int_RQ_FF>.
+    Found finite state machine <FSM_3> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 22                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 9                                              |
+    | Clock              | Clk (rising_edge)                              |
+    | Reset              | Reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <PC_reg[7]_GND_59_o_add_10_OUT> created at line 135.
+    Found 8-bit adder for signal <TMP_reg[7]_Index_Reg[7]_add_29_OUT> created at line 287.
+    Found 64x5-bit Read Only RAM for signal <INS_reg[5]_GND_59_o_wide_mux_11_OUT>
+    Found 4x1-bit Read Only RAM for signal <INS_reg[4]_GND_76_o_Mux_175_o>
+    Found 32x5-bit Read Only RAM for signal <_n0638>
+    Found 5-bit 4-to-1 multiplexer for signal <INS_reg[7]_GND_59_o_wide_mux_39_OUT> created at line 139.
+    Found 1-bit tristate buffer for signal <Databus<7>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<6>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<5>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<4>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<3>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<2>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<1>> created at line 65
+    Found 1-bit tristate buffer for signal <Databus<0>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<7>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<6>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<5>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<4>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<3>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<2>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<1>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Addr<0>> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_Write> created at line 65
+    Found 1-bit tristate buffer for signal <RAM_OE> created at line 65
+    Found 8-bit comparator greater for signal <PC_reg[7]_PWR_42_o_LessThan_2_o> created at line 88
+    Summary:
+	inferred   3 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  27 Multiplexer(s).
+	inferred  18 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <CPU> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\ALU.vhd".
+    Found 8-bit register for signal <B>.
+    Found 8-bit register for signal <acc>.
+    Found 8-bit register for signal <index>.
+    Found 8-bit register for signal <A>.
+    Found 1-bit register for signal <aux_fz>.
+    Found 8-bit register for signal <acc_save>.
+    Found 8-bit adder for signal <A[7]_B[7]_add_0_OUT> created at line 87.
+    Found 8-bit adder for signal <A[7]_GND_78_o_add_18_OUT> created at line 162.
+    Found 8-bit subtractor for signal <GND_78_o_GND_78_o_sub_3_OUT<7:0>> created at line 95.
+    Found 8-bit subtractor for signal <GND_78_o_GND_78_o_sub_16_OUT<7:0>> created at line 154.
+    Found 1-bit tristate buffer for signal <databus<7>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<6>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<5>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<4>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<3>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<2>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<1>> created at line 183
+    Found 1-bit tristate buffer for signal <databus<0>> created at line 183
+    Found 8-bit comparator equal for signal <A[7]_B[7]_equal_11_o> created at line 133
+    Found 8-bit comparator greater for signal <A[7]_B[7]_LessThan_12_o> created at line 139
+    Found 8-bit comparator greater for signal <B[7]_A[7]_LessThan_13_o> created at line 145
+    Found 8-bit comparator lessequal for signal <n0014> created at line 153
+    Found 8-bit comparator lessequal for signal <n0016> created at line 153
+    Found 8-bit comparator greater for signal <A[7]_GND_78_o_LessThan_18_o> created at line 161
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  27 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <ROM>.
+    Related source file is "C:\Xilinx\Proyectos\PIC_improved\ROM.vhd".
+    Found 256x12-bit Read Only RAM for signal <_n0695>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <ROM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x7-bit single-port Read Only RAM                    : 2
+ 256x12-bit single-port Read Only RAM                  : 1
+ 256x8-bit single-port RAM                             : 1
+ 32x5-bit single-port Read Only RAM                    : 1
+ 4x1-bit single-port Read Only RAM                     : 1
+ 64x5-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 11
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 5
+ 8-bit addsub                                          : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 86
+ 1-bit register                                        : 5
+ 2-bit register                                        : 1
+ 4-bit register                                        : 2
+ 7-bit register                                        : 1
+ 8-bit register                                        : 77
+# Comparators                                          : 10
+ 4-bit comparator greater                              : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 6
+ 8-bit comparator lessequal                            : 2
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 34
+ 1-bit 8-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 4
+ 5-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 25
+ 8-bit 64-to-1 multiplexer                             : 1
+# Tristates                                            : 68
+ 1-bit tristate buffer                                 : 68
+# FSMs                                                 : 4
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/FIFO.ngc>.
+Loading core <FIFO> for timing and area information for instance <Internal_memory>.
+
+Synthesizing (advanced) Unit <CPU>.
+INFO:Xst:3231 - The small RAM <Mram_INS_reg[5]_GND_59_o_wide_mux_11_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 5-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <INS_reg<5:0>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram__n0638> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 5-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <INS_reg<4:0>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_INS_reg[4]_GND_76_o_Mux_175_o> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(INS_reg<4>,INS_reg<2>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CPU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DMA>.
+The following registers are absorbed into counter <cont>: 1 register on signal <cont>.
+Unit <DMA> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0695> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 12-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Program_counter<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RS232_RX>.
+The following registers are absorbed into counter <cnt_halfbit>: 1 register on signal <cnt_halfbit>.
+The following registers are absorbed into counter <data_count>: 1 register on signal <data_count>.
+The following registers are absorbed into counter <bit_counter>: 1 register on signal <bit_counter>.
+Unit <RS232_RX> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RS232_TX>.
+The following registers are absorbed into counter <data_count>: 1 register on signal <data_count>.
+The following registers are absorbed into counter <bit_counter>: 1 register on signal <bit_counter>.
+Unit <RS232_TX> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_contents_ram_ge> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     clkA           | connected to signal <Clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <databus>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Temp_H> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contents_ram_es<49><7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Temp_H>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Temp_L> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <contents_ram_es<49><3:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Temp_L>        |          |
+    -----------------------------------------------------------------------
+Unit <ram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 16x7-bit single-port distributed Read Only RAM        : 2
+ 256x12-bit single-port distributed Read Only RAM      : 1
+ 256x8-bit single-port distributed RAM                 : 1
+ 32x5-bit single-port distributed Read Only RAM        : 1
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 64x5-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 5
+ 8-bit adder                                           : 3
+ 8-bit addsub                                          : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 6
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 605
+ Flip-Flops                                            : 605
+# Comparators                                          : 10
+ 4-bit comparator greater                              : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 6
+ 8-bit comparator lessequal                            : 2
+# Multiplexers                                         : 73
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 64-to-1 multiplexer                             : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 4
+ 5-bit 4-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 25
+# FSMs                                                 : 4
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <RS232_PHY/Transmitter/FSM_0> on signal <CurrentState[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ startbit | 01
+ sendata  | 11
+ stopbit  | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <RS232_PHY/Receiver/FSM_1> on signal <CurrentState[1:2]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ idle     | 00
+ startbit | 01
+ rcvdata  | 11
+ stopbit  | 10
+----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <DMA_PHY/FSM_2> on signal <CurrentState[1:11]> with one-hot encoding.
+--------------------------------
+ State           | Encoding
+--------------------------------
+ idle            | 00000000001
+ wait_buses      | 00000000100
+ wait_tx_ready_1 | 00000000010
+ wait_tx_ready_2 | 01000000000
+ read_rs232      | 00000001000
+ write_rs232_1   | 00000010000
+ write_rs232_2   | 00000100000
+ wait_ack_1      | 00010000000
+ wait_ack_2      | 00100000000
+ notify          | 00001000000
+ end_tx          | 10000000000
+--------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <CPU_PHY/FSM_3> on signal <current_state[1:3]> with user encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ idle         | 000
+ fetch        | 001
+ interruption | 010
+ op_fetch     | 011
+ decode       | 100
+ execute      | 101
+ receive      | 110
+ transmit     | 111
+--------------------------
+WARNING:Xst:2042 - Unit ALU: 8 internal tristates are replaced by logic (pull-up yes): databus<0>, databus<1>, databus<2>, databus<3>, databus<4>, databus<5>, databus<6>, databus<7>.
+WARNING:Xst:2042 - Unit CPU: 18 internal tristates are replaced by logic (pull-up yes): Databus<0>, Databus<1>, Databus<2>, Databus<3>, Databus<4>, Databus<5>, Databus<6>, Databus<7>, RAM_Addr<0>, RAM_Addr<1>, RAM_Addr<2>, RAM_Addr<3>, RAM_Addr<4>, RAM_Addr<5>, RAM_Addr<6>, RAM_Addr<7>, RAM_OE, RAM_Write.
+WARNING:Xst:2040 - Unit ram: 8 multi-source signals are replaced by logic (pull-up yes): databus<0>, databus<1>, databus<2>, databus<3>, databus<4>, databus<5>, databus<6>, databus<7>.
+WARNING:Xst:2042 - Unit DMA: 26 internal tristates are replaced by logic (pull-up yes): address<0>, address<1>, address<2>, address<3>, address<4>, address<5>, address<6>, address<7>, aux_oe, aux_write_en, databus<0>, databus<1>, databus<2>, databus<3>, databus<4>, databus<5>, databus<6>, databus<7>, tx_data<0>, tx_data<1>, tx_data<2>, tx_data<3>, tx_data<4>, tx_data<5>, tx_data<6>, tx_data<7>.
+
+Optimizing unit <PICtop> ...
+
+Optimizing unit <RS232top> ...
+
+Optimizing unit <RS232_TX> ...
+
+Optimizing unit <RS232_RX> ...
+
+Optimizing unit <ShiftRegister> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block PICtop, actual ratio is 13.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <RS232_PHY/Internal_memory> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+FlipFlop CPU_PHY/INS_reg_4 has been replicated 3 time(s)
+FlipFlop CPU_PHY/current_state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop CPU_PHY/current_state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop CPU_PHY/current_state_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop DMA_PHY/CurrentState_FSM_FFd6 has been replicated 1 time(s)
+FlipFlop DMA_PHY/CurrentState_FSM_FFd7 has been replicated 1 time(s)
+FlipFlop DMA_PHY/CurrentState_FSM_FFd8 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 666
+ Flip-Flops                                            : 666
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : PICtop.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1377
+#      GND                         : 3
+#      INV                         : 8
+#      LUT1                        : 14
+#      LUT2                        : 52
+#      LUT3                        : 97
+#      LUT4                        : 100
+#      LUT5                        : 385
+#      LUT6                        : 597
+#      MUXCY                       : 35
+#      MUXF7                       : 37
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 697
+#      FD                          : 6
+#      FDC                         : 26
+#      FDCE                        : 270
+#      FDE                         : 347
+#      FDP                         : 15
+#      FDPE                        : 2
+#      FDRE                        : 31
+# RAMS                             : 9
+#      RAM256X1S                   : 8
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 25
+#      IBUF                        : 2
+#      OBUF                        : 23
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             697  out of  18224     3%  
+ Number of Slice LUTs:                 1285  out of   9112    14%  
+    Number used as Logic:              1253  out of   9112    13%  
+    Number used as Memory:               32  out of   2176     1%  
+       Number used as RAM:               32
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1355
+   Number with an unused Flip Flop:     658  out of   1355    48%  
+   Number with an unused LUT:            70  out of   1355     5%  
+   Number of fully used LUT-FF pairs:   627  out of   1355    46%  
+   Number of unique control sets:        31
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  26  out of    232    11%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 706   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.751ns (Maximum Frequency: 102.556MHz)
+   Minimum input arrival time before clock: 5.995ns
+   Maximum output required time after clock: 5.915ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 9.751ns (frequency: 102.556MHz)
+  Total number of paths / destination ports: 1393074 / 1474
+-------------------------------------------------------------------------
+Delay:               9.751ns (Levels of Logic = 8)
+  Source:            CPU_PHY/INS_reg_0 (FF)
+  Destination:       RAM_PHY/contents_ram_es_8_5 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: CPU_PHY/INS_reg_0 to RAM_PHY/contents_ram_es_8_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.447   1.147  CPU_PHY/INS_reg_0 (CPU_PHY/INS_reg_0)
+     LUT6:I1->O           19   0.203   1.072  CPU_PHY/Mmux_GND_59_o_INS_reg[4]_MUX_194_o181 (CPU_PHY/Mmux_GND_59_o_INS_reg[4]_MUX_194_o18)
+     LUT3:I2->O            9   0.205   0.830  Address<0>LogicTrst4_SW1 (N34)
+     LUT6:I5->O           22   0.205   1.134  Address<0>LogicTrst4_2 (Address<0>LogicTrst41)
+     LUT6:I5->O            1   0.205   0.808  RAM_PHY/mux5_125 (RAM_PHY/mux5_125)
+     LUT6:I3->O            1   0.205   0.808  RAM_PHY/mux5_8 (RAM_PHY/mux5_8)
+     LUT6:I3->O           10   0.205   0.857  Databus<5>LogicTrst3 (Databus<5>LogicTrst2)
+     LUT6:I5->O           12   0.205   0.909  Databus<5>LogicTrst4 (Databus<5>)
+     LUT5:I4->O            1   0.205   0.000  RAM_PHY/contents_ram_es_8_5_dpot1 (RAM_PHY/contents_ram_es_8_5_dpot1)
+     FDE:D                     0.102          RAM_PHY/contents_ram_es_8_5
+    ----------------------------------------
+    Total                      9.751ns (2.187ns logic, 7.564ns route)
+                                       (22.4% logic, 77.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 703 / 703
+-------------------------------------------------------------------------
+Offset:              5.995ns (Levels of Logic = 2)
+  Source:            Reset (PAD)
+  Destination:       DMA_PHY/CurrentState_FSM_FFd1 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Reset to DMA_PHY/CurrentState_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           271   1.222   2.068  Reset_IBUF (Reset_IBUF)
+     INV:I->O            292   0.206   2.070  ALU_PHY/reset_inv1_INV_0 (ALU_PHY/reset_inv)
+     FDCE:CLR                  0.430          ALU_PHY/A_0
+    ----------------------------------------
+    Total                      5.995ns (1.858ns logic, 4.137ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 80 / 23
+-------------------------------------------------------------------------
+Offset:              5.915ns (Levels of Logic = 4)
+  Source:            RS232_PHY/Transmitter/data_count_0 (FF)
+  Destination:       RS232_TX (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: RS232_PHY/Transmitter/data_count_0 to RS232_TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   1.089  RS232_PHY/Transmitter/data_count_0 (RS232_PHY/Transmitter/data_count_0)
+     LUT6:I1->O            1   0.203   0.000  RS232_PHY/Transmitter/Mmux_data_count[2]_Data[7]_Mux_16_o_3 (RS232_PHY/Transmitter/Mmux_data_count[2]_Data[7]_Mux_16_o_3)
+     MUXF7:I1->O           1   0.140   0.684  RS232_PHY/Transmitter/Mmux_data_count[2]_Data[7]_Mux_16_o_2_f7 (RS232_PHY/Transmitter/data_count[2]_Data[7]_Mux_16_o)
+     LUT4:I2->O            1   0.203   0.579  RS232_PHY/Transmitter/aux_tx1 (RS232_TX_OBUF)
+     OBUF:I->O                 2.571          RS232_TX_OBUF (RS232_TX)
+    ----------------------------------------
+    Total                      5.915ns (3.564ns logic, 2.351ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    9.751|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.33 secs
+ 
+--> 
+
+Total memory usage is 313372 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+
